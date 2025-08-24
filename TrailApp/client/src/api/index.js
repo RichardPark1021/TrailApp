@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000' });
+const API = axios.create({ baseURL: 'https://trailapp-backend.onrender.com' });
 
 
 export const signUp = (formData) => API.post('/api/user/signup', formData);
