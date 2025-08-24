@@ -1,0 +1,51 @@
+Global CSS File: interfaceSettings.css
+Location: /src/interfaceSettings.css
+
+Team Members and their Variables:
+
+1. [Ginette]
+   - Variable: --font-size-large
+     Used on: "WALKING TRAILS" heading.
+      - Variable: --font-size-small
+     Used on: Navbar menu items.
+   - Variable: --heading-gradient
+     Used on: "WALKING TRAILS" heading gradient.
+      - Variable: --primary-color
+     Used on: nav items for hover states.
+      - Variable: --menu-button-bg-color
+     Used on: the background of menu toggle button.
+
+
+2. [Joel Erulu]
+   - Variable: --image-max-width-md
+     Used on: Landing Page Images.
+      - Variable: --font-size-heading
+     Used on: h1, h2 Heading titles on Landing page.
+
+3. [Josiah]
+   - Variable  --btn-hover-color
+    Used on: "WALKING TRAILS" buttons' hover color.
+   - Variable  --btn-active-color
+    Used on: "WALKING TRAILS" buttons' pressed color.
+   - Variable --btn-border-color
+    Used on: "WALKING TRAILS" buttons' border color.
+   - Variable --font-size-medium
+    Used on: "WALKING TRAILS" landing page footer text.
+
+4. [Mathews Binny]
+    Footer Styling
+      - Variable: --footer-font-size
+        Used on: .footerText for font size in the footer.
+      - Variable: --footer-font-color
+        Used on: .footerText for text color in the footer.
+      - Variable: --footer-font-family (Commented out since may be changed to conform with other page text later)
+        Used on: .footerText for font family in the footer
+      - Variable: --appBar-background
+        Used on: .appBar for background color of the AppBar.
+      - Variable: --appBar-border-radius
+        Used on: .appBar for border radius of the AppBar.
+      - Variable: --appBar-margin
+        Used on: .appBar for margin of the AppBar.
+    Underline Styling
+      - Variable: --underline-style
+        Used on: .underline-link for the color/thickness of sign in link

@@ -1,0 +1,29 @@
+Filepath: TrailApp/client/src/interfaceSettings.css
+Richard Park:
+-Created Variables --category-size-large:1.5 rem; & --category-font-bold: bold;
+-Used on: Nutrition&Hydration.js
+Richard implemented variables category font size&font bold in interfaceSettings.css and
+used them on Nutrition&Hydration.js.
+
+Nhat Nguyen:
+Created bootstrap variable: --btn-privacy-popup- color #007bff; 
+Used on: SignUpForm.js
+Created variable: --btn-feedback-color: #28a745;
+Used on UserControlPanel.js
+Nhat implemented --btn=privacy-popup on SignUpForm.js and feedback-color on
+UserControlPanel.js.
+
+Ronan Bernal:
+Created Variable: --btn-danger-bg: red;
+Used on: InjuryPrevention.js
+Created Variable: --btn-danger-hover-bg: darkred;
+Used on: InjuryPrevention.js
+Ronan created --btn-danger and danger:hover on injuryPrevention.js.
+
+Kajuan McEachin:
+Created Variable: 
+--btn.gold:active: color:gold; box-shadow: 0 0 50px 10px gold;
+--btn.green:active: color:green; box-shadow: 0 0 50px 10px green;
+--btn.gray:active: color:gray; box-shadow: 0 0 50px 10px gray;
+Used on: Trails.js
+Kajuan created btn.gold, green, and gray and implemented it on Trails.js.

@@ -1,0 +1,1421 @@
+/* Global Stylesheet */
+
+/* Reusable Styles */
+:root {
+  /* Color Variables */
+  --btn-privacy-popup-color: #007bff;
+  --btn-feedback-color: #28a745;
+  --primary-color: darkgreen;
+  --secondary-color: #6c757d;
+
+  /* Other variables... */
+  --btn-feedback-color: #28a745;
+  --btn-feedback-hover-color: #218838;
+  --btn-feedback-border-color: #1e7e34;
+  --btn-feedback-text-color: white;
+
+  /* Font Variables */
+  --font-size-heading: 2rem;
+  --font-size-lead: 0.5rem;
+  --font-size-large: 2.5rem;
+  --font-size-small: 1rem;
+  --font-size-medium: 1.75rem;
+
+  
+  /* Image Variables */
+  --image-max-width-lg: 600px;
+  --image-max-width-md: 500px;
+  --image-height-auto: auto;
+  
+  /* Button Variables */
+  --btn-padding: 0.5rem 1.2rem;
+  --btn-border-radius: 50px;
+  --btn-margin: 0 "auto";
+  --btn-border-color: rgb(0, 80, 0);
+  --btn-hover-color: rgb(0, 90, 0);
+  --btn-active-color: darkgreen;
+
+  --menu-button-bg-color: darkgreen; /* Green background for menu button */
+  --menu-button-text-color: white; /* White text color for menu button */
+
+  /* Heading Gradient */
+  --heading-gradient: linear-gradient(darkgreen, #808080, white); /* Green, gray, yellow */
+
+  /* Typography Variables (Viewport Scaled) */
+  --font-size-heading: clamp(1.75rem, 2.5vw, 3rem);
+  --font-size-lead: clamp(1rem, 2vw, 1.25rem);
+  --font-size-medium: clamp(1.25rem, 1.75vw, 2rem);
+  --font-size-small: clamp(0.875rem, 1.25vw, 1rem);
+
+  /* Button Sizing for Mobile Responsiveness */
+  --btn-padding: clamp(0.5rem, 2.5vw, 0.75rem) clamp(1rem, 4vw, 1.5rem);
+  --btn-margin: 0 auto;
+  
+  /* Image Sizes for Responsive Layouts */
+  --image-max-width-md: 80%;
+  --image-max-width-lg: 90%;
+
+  /* Font design for categories*/
+  --category-size-large: 1.5rem;
+  --category-font-bold: bold;
+}
+
+/* Category Font*/
+.category-font {
+  font-size: var(--category-size-large);
+  font-weight: var(--category-font-bold);
+}
+
+/* Feedback Button Styling */
+.feedback-button {
+  background-color: var(--btn-feedback-color);
+  border-color: var(--btn-feedback-border-color);
+  color: var(--btn-feedback-text-color);
+  transition: all 0.3s ease;
+}
+
+.feedback-button:hover {
+  background-color: var(--btn-feedback-hover-color);
+  border-color: var(--btn-feedback-border-color);
+  box-shadow: 0 0 10px rgba(33, 136, 56, 0.5); 
+  color: var(--btn-feedback-text-color);
+}
+
+/* Trails.js */
+.trailsCollapse {
+    text-align: center;
+}
+
+.trailsCollapse:hover {
+  cursor: pointer;
+}
+
+/* Gwinnett logo styling */
+.logo {
+  width: 150px;
+  height: var(--image-height-auto); /* Using global image height */
+  background-color: transparent;
+}
+
+.img-fluid {
+  max-width: 100%; /* Make sure images are fully responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+p.lead {
+  font-size: var(--font-size-lead);
+   /* Helps with readability on small screens */
+}
+
+.btn-primary {
+  padding: var(--btn-padding);
+  display: inline-block;
+}
+
+
+/* "WALKING TRAILS" text styling */
+.heading {
+  font-size: var(--font-size-large); /* Using global font size */
+  font-weight: bold;
+  background: var(--heading-gradient); /* Using global gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient text styling */
+.heading-gradient {
+  background: linear-gradient(darkgreen, #808080, white); /* Green, gray, yellow */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 2.5rem; /* Adjust as needed */
+}
+
+/* Custom button for "Logout" */
+.btn-outline-danger {
+  color: var(--menu-button-text-color);
+  background-color: var(--primary-color);
+  border: none;
+  font-weight: bold;
+}
+
+.btn-outline-danger:hover {
+  background-color: darkgreen;
+  color: var(--menu-button-text-color);
+}
+
+/* General button styling for .btn-primary */
+.btn-primary {
+  background-color: white; /* White background */
+  color: green; /* Blue text */
+  padding: var(--btn-padding); /* Reuse padding variable */
+  border-radius: var(--btn-border-radius); /* Reuse border-radius variable */
+  border: 1.5px solid black; /* Black border for consistency */
+  display: block;
+  margin: var(--btn-margin); /* Reuse margin variable */
+  margin-bottom: 10px; /* Adjust bottom margin */
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover/active effect */
+}
+
+/* Hover State for .btn-primary */
+.btn-primary:hover {
+  background-color: green; /* Blue background on hover */
+  border-color: #1e7e34;
+  color: white; /* White text on hover */
+  transition: 0.24s;
+  transform: scale(1.05); /* Slight scale-up effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Shadow effect on hover */
+}
+
+/* Active State for .btn-primary */
+.btn-primary:active {
+  color: white; /* White text on active */
+  background-color: red; /* Darker blue on active */
+  transition: 0.24s;
+  transform: scale(0.98); /* Slight shrink on active */
+}
+
+/* Focus Outline for .btn-primary */
+.btn-primary:focus {
+  outline: 1.5px solid lime; /* Blue outline for primary button */
+  outline-offset: 1.5px; /* Optional: Adjusts how far the outline appears from the button */
+}
+
+/* General button styling for .btn-danger */
+.btn-danger {
+  background-color: white; /* White background */
+  color: red; /* Red text */
+  padding: var(--btn-padding); /* Reuse padding variable */
+  border-radius: var(--btn-border-radius); /* Reuse border-radius variable */
+  border: 1.5px solid black; /* Black border for consistency */
+  display: block;
+  margin: var(--btn-margin); /* Reuse margin variable */
+  margin-bottom: 10px; /* Adjust bottom margin */
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover/active effect */
+}
+
+/* Hover State for .btn-danger */
+.btn-danger:hover {
+  background-color: red; /* Red background on hover */
+  color: white; /* White text on hover */
+  transition: 0.24s;
+  transform: scale(1.05); /* Slight scale-up effect on hover */
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2); /* Shadow effect on hover */
+}
+
+/* Active State for .btn-danger */
+.btn-danger:active {
+  color: white; /* White text on active */
+  background-color: darkred; /* Dark red background on active */
+  transition: 0.24s;
+  transform: scale(0.98); /* Slight shrink on active */
+}
+
+/* Focus Outline for .btn-danger */
+.btn-danger:focus {
+  outline: 1.5px solid red; /* Red outline for danger button */
+  outline-offset: 1.5px; /* Optional: Adjusts how far the outline appears from the button */
+}
+
+/* Trail button - Copy all of primary and see what happens */
+.btn-trail {
+  background-color: white;
+  color: #77bc1f;
+  padding: 20px 40px;
+  border-radius: var(--btn-border-radius);
+  border: 2px solid #77bc1f;
+  display: block;
+  margin: var(--btn-margin);
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.24s, color 0.24s, border 0.24s, box-shadow 0.24s;
+  width: 100%;
+  height: 100px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+  .btn-trail {
+    padding: 15px 30px;
+    font-size: 16px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-trail {
+    padding: 12px 24px;
+    font-size: 14px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-trail {
+    padding: 8px 16px;
+    font-size: 12px;
+    height: 60px;
+  }
+}
+
+.btn-gold {
+  background-color: white;
+  color: gold;
+  border: 2px solid gold;
+}
+
+.btn-gold:hover {
+  background-color: rgba(255, 215, 0, 0.5);
+  color: black;
+  border: 3px solid black;
+}
+
+.btn-gold:active {
+  background-color: gold;
+  box-shadow: 0 0 10px 5px gold;
+}
+
+.btn-gray {
+  background-color: white;
+  color: gray;
+  border: 2px solid gray;
+}
+
+.btn-gray:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+  color: black;
+  border: 3px solid black;
+}
+
+.btn-gray:active {
+  background-color: gray;
+  box-shadow: 0 0 10px 5px gray;
+}
+
+.btn-green {
+  background-color: white;
+  color: #77bc1f;
+  border: 2px solid #77bc1f;
+}
+
+.btn-green:hover {
+  background-color: rgba(119, 188, 31, 0.5);
+  color: black;
+  border: 3px solid black;
+}
+
+.btn-green:active {
+  background-color: #77bc1f;
+  box-shadow: 0 0 10px 5px #77bc1f;
+}
+
+/* Heading and Paragraph Styling */
+h1, h2 {
+  font-size: var(--font-size-heading);
+  text-align: center;
+
+}
+
+h3 {
+    font-size: var(--font-size-medium);
+}
+
+p.lead {
+  font-size: var(--font-size-lead);
+}
+
+/* Footer Styling */
+.footer-card {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-card .card-text {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links .nav-link {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links .nav-link:hover {
+  text-decoration: underline;
+  color: lime; 
+}
+
+/* Centering Images */
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.img-fluid {
+  max-width: var(--image-max-width-md);
+  height: var(--image-height-auto);
+  display: block;
+}
+
+/* Adjust image sizes for smaller screens */
+@media (max-width: 900px) {
+  .img-fluid {
+    max-width: 95%;
+  }
+}
+
+
+/* Further adjustments for extra small screens */
+@media (max-width: 650px) {
+  .img-fluid {
+    max-width: 95%; 
+  }
+
+  .heading {
+    font-size: var(--font-size-medium); /* Using global font size */
+  }
+
+  .logo {
+    width: 100px;
+
+  }
+}
+
+/* Mobile Menu Button */
+.navbar-toggler {
+  --toggler-size: clamp(40px, 5vw, 48px); /* Responsive base size */
+  --line-width: clamp(18px, 2.5vw, 24px); /* Responsive line width */
+  --line-height: clamp(2px, 0.3vw, 3px); /* Responsive line height */
+  --line-gap: clamp(4px, 0.8vw, 6px); /* Responsive gap between lines */
+  
+  width: var(--toggler-size);
+  height: var(--toggler-size);
+  border: none !important;
+  border-radius: 8px;
+  padding: clamp(8px, 1.2vw, 12px);
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--line-gap);
+  transition: all 0.3s ease;
+  position: relative;
+  margin-right: clamp(0.5rem, 1vw, 1rem);
+}
+
+/* Custom Hamburger Icon */
+.navbar-toggler::before,
+.navbar-toggler::after,
+.navbar-toggler .navbar-toggler-icon {
+  content: '';
+  display: block;
+  width: var(--line-width);
+  height: var(--line-height);
+  background: white;
+  border-radius: var(--line-height);
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-color: white;
+  background-image: none !important;
+  width: var(--line-width) !important;
+  height: var(--line-height) !important;
+}
+
+/* Animation for active state */
+.navbar-toggler[aria-expanded="true"]::before {
+  transform: translateY(calc(var(--line-height) + var(--line-gap))) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"]::after {
+  transform: translateY(calc(-1 * (var(--line-height) + var(--line-gap)))) rotate(-45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  transform: scale(0);
+}
+
+/* Hover effects */
+.navbar-toggler:hover {
+  background: var(--btn-hover-color);
+  transform: scale(1.05);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Remove fixed sizes from media queries */
+@media (max-width: 768px), 
+       (max-width: 576px), 
+       (max-width: 480px) {
+  .navbar-toggler {
+    /* The clamp values above will handle the sizing */
+    position: relative;
+    right: 0;
+  }
+}
+
+.navbar-nav .nav-link {
+  font-size: var(--font-size-small); /* Using global font size */
+  font-weight: bold;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color); /* Using global primary color */
+}
+
+.navbar {
+  border: none;
+  padding: 10px 20px;
+}
+
+
+
+
+/* Collapsible navbar styles for mobile */
+@media (max-width: 768px) {
+    .collapse.navbar-collapse {
+        flex-direction: column;
+        align-items: center;
+        background-color: darkgreen; /* Set background color of the hidden menu to green */
+        width: 60%; /* Make the box smaller (adjust as needed) */
+        margin: 0 auto; /* Center the box horizontally */
+        /*border-radius: 8px; /* Optional: rounded corners */
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center the links */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0; /* Add spacing between the links */
+        width: 100%;
+        color: black; /* Set text color to black */
+        transition: color 0.3s ease;
+    }
+
+    
+
+    .btn-outline-danger {
+        margin: 10px 0; /* Adjust margin for logout button on mobile */
+    }
+}
+
+@media (max-width: 991px) {
+  .collapse.navbar-collapse {
+      flex-direction: column;
+      align-items: center;
+      background-color: darkgreen; /* Set background color of the hidden menu to green */
+      width: 60%; /* Make the box smaller (adjust as needed) */
+      margin: 0 auto; /* Center the box horizontally */
+      /*border-radius: 8px; /* Optional: rounded corners */
+      padding: 10px;
+  }
+
+  .navbar-nav {
+      width: 100%; /* Full width for mobile */
+      text-align: center; /* Center the links */
+  }
+
+  .navbar-nav .nav-link {
+      padding: 10px 0; /* Add spacing between the links */
+      width: 100%;
+      color: black; /* Set text color to black */
+      transition: color 0.3s ease;
+  }
+
+  
+
+  .btn-outline-danger {
+      margin: 10px 0; /* Adjust margin for logout button on mobile */
+  }
+}
+
+/* Authorization.js */
+#sign-in-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+#sign-in-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevents overflow of child elements */
+}
+
+#sign-in-card-body {
+  padding: 20px;
+}
+
+#sign-in-title {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#sign-in-submit-btn {
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+#sign-in-submit-btn {
+  background-color: darkgreen;
+  color: white;
+  padding: 5px;
+}
+
+#btn-spacing {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+#switch-mode-btn {
+  color: black;
+  text-decoration: none;
+}
+
+#switch-mode-btn:hover {
+  text-decoration: underline;
+}
+
+#forgot-mode-btn {
+  color: black;
+  text-decoration: none;
+}
+
+#forgot-mode-btn:hover {
+  text-decoration: underline;
+}
+
+#back-to-signin-btn {
+  color: black;
+  text-decoration: none;
+}
+
+#back-to-signin-btn:hover {
+  text-decoration: underline;
+}
+
+#sign-in-form-group {
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+/* Input.js & AdminManager.js */
+.input-label {
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #333;
+  text-align: center;
+}
+
+.input-field {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.2s;
+  text-align: center;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.input-toggle {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+/* Tables */
+.table-wrapper {
+  max-height: 30%;
+  width: 100%;
+  overflow: scroll;
+  display:inline-block;
+}
+
+.btn-secondary {
+  background-color: var(--primary-color);
+  border-radius: var(--btn-border-radius);
+  
+  border-color: var(--btn-border-color); 
+  margin-bottom: '10px';
+
+}
+
+.btn-secondary:hover
+{
+    background-color: var(--btn-hover-color);
+    transition: 0.24s;
+}
+
+.btn-secondary:active
+{
+    color: var(--btn-active-color);
+    transition: 0.24s;
+}
+
+.sidebar {
+  position: fixed; 
+  top: auto; 
+  left: 0; 
+  height: 35vh; 
+
+  /* background-color: #f8f9fa; */
+  /* border-right: 1px solid #dee2e6; */
+  overflow-y: auto; 
+}
+
+.search-bar {
+  position: sticky; /* Make the search bar sticky */
+  top: 0; /* Align to the top of the content area */
+  background-color: white; /* Background color for the search bar */
+  padding: 10px; /* Padding for the search bar */
+  z-index: 1000; /* Ensure it stays above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+.content {
+  margin-left: 230px; 
+  height: 100vh;
+  overflow-y: auto; 
+}
+
+.sidebar .nav-link {
+  color: #000;
+  transition: background-color 0.3s ease; 
+}
+
+.sidebar .nav-link:hover {
+  color:#000;
+}
+/* Grid for the admin tables*/
+.user-grid-container{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  overflow-x: auto;
+}
+.user-grid-header,.user-grid-row{
+  display: grid;
+  grid-template-columns: 3fr 3fr 2fr 3fr;
+  gap: 8px;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+  text-align: center;
+  word-break: break-word;
+}
+.user-grid-header {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+.user-grid-row span input[type="checkbox"] {
+  margin-top: 4px;
+}
+.no-results {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+/* Grid for video page */
+.video-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+.video-grid-header,
+.video-grid-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr 1fr 1fr 2fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.video-grid-header {
+  font-weight: bold;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+.video-cell iframe {
+  width: 100%;
+  height: 100px;
+  border-radius: 4px;
+}
+.title-cell, .category-cell {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Responsive Buttons */
+@media (min-width: 360px) and (max-width: 992px) {
+  .btn-responsive {
+    padding:10px;
+    font-size:var(--font-size-small);
+    line-height: 1.2;
+    max-width: 100%;
+
+  }
+}
+
+@media (min-width: 161px) and (max-width: 359px) {
+  .btn-responsive, .footer-card, .collapse.navbar-collapse, .textContainer {
+    padding:8px;
+    font-size:var(--font-size-small);
+    line-height: 1;
+    width: 90%;
+    max-width: 100%;
+
+  }
+}
+
+
+
+
+@media (max-width: 160px) {
+  .btn-responsive, .footer-card, .collapse.navbar-collapse, .textContainer {
+    padding:4px;
+    font-size:var(--font-size-small);
+    line-height: 1;
+    text-align: center;
+    width: 140px;
+    font-size: var(--font-size-small);
+    max-width: 100%;
+
+  }
+}
+
+/*Responsive Headers*/
+@media (min-width: 161px) and (max-width: 359px) {
+  .h1, .h2, h3 {
+    padding:8px;
+    font-size:--font-size-small;
+    line-height: 1;
+    width: 90%;
+  }
+}
+
+
+@media (max-width: 160px) {
+  .h1, .h2, h3 {
+    padding:4px;
+    font-size:var(--font-size-small);
+    line-height: 1;
+  }
+  span.heading-gradient{
+    font-size: var(--font-size-small);
+  }
+}
+
+/* Responsive Paragraphs */
+@media (min-width: 161px) and (max-width: 359px) {
+  .p, .p-lead, .card-text, .navbar-nav, .nav-link, #sign-in-card, #sign-in-container {
+    padding:8px;
+    font-size:--font-size-small;
+    line-height: 1;
+    width: 90%;
+  }
+
+  span.heading-gradient{
+    font-size: var(--font-size-small);
+  }
+}
+
+
+@media (max-width: 160px) {
+  .p, .lead, .card-text, .navbar-nav, .nav-link, #sign-in-card, #sign-in-container {
+    padding:2px;
+    font-size:var(--font-size-small);
+    line-height: 1;
+    text-overflow: clip;
+  }
+
+  span.heading-gradient{
+    font-size: var(--font-size-small);
+  }
+}
+
+@media (min-width: 161px) and (max-width: 359px) {
+  #sign-in-card, #sign-in-container {
+    padding:8px;
+    font-size:var(--font-size-small);
+    line-height: 1;
+    width: 90%;
+  }
+
+  span.heading-gradient{
+    font-size: var(--font-size-small);
+  }
+}
+
+
+@media (max-width: 160px) {
+  #sign-in-card, #sign-in-container {
+    padding:4px;
+    font-size:var(--font-size-small);
+    line-height: 1;
+    text-align: center;
+    width: 190px;
+    text-overflow: clip; 
+  }
+}
+
+@media (max-width: 160px) {
+  .section {
+    width: 100%;
+  }
+
+  span.heading-gradient{
+    font-size: var(--font-size-small);
+  }
+}
+
+/* Improve Typography on Very Small Screens */
+@media (max-width: 360px) {
+
+  .logo {
+    width: 80px;
+  }
+
+  /* Responsive Images */
+  .img-fluid {
+    max-width: 90%;
+  }
+}
+
+/* Ensure Better Readability for Texts */
+@media (max-width: 360px) {
+  h1, h2, h3{
+    font-size: var(--font-size-small);
+  }
+
+  /* Add Spacing in Footer for Smaller Screens */
+  .footer-card {
+    padding: 10px;
+  }
+}
+
+/* Center Buttons and Links on Mobile */
+@media (max-width: 360px) {
+  .btn-primary, .btn-outline-danger {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  span.heading-gradient{
+    font-size: var(--font-size-small);
+  }
+
+  p {
+    font-size: var(--font-size-small);
+  }
+}
+
+
+body {
+  font-size: 18px;
+}
+
+.navbar-text {
+  font-size: 16px;
+}
+
+.hamburger-icon {
+  font-size: 24px; /* or width/height as needed */
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .navbar-text {
+    font-size: 14px;
+  }
+
+  .hamburger-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger-menu {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .navbar-text {
+    font-size: 12px;
+  }
+
+  .hamburger-icon {
+    font-size: 18px; /* Adjust this to make it smaller */
+    padding: 8px; /* Reduce padding if needed */
+  }
+}
+
+@media (max-width: 576px) {
+  .hamburger-menu {
+    width: 18px;
+    height: 18px;
+    
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Adjusts alignment on smaller screens if necessary */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+}
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .navbar-custom .heading-gradient {
+      font-size: 0.75rem; /* Adjust the font size for smaller screens */
+  }
+
+  .navbar-custom .navbar-toggler {
+      padding: 0.25rem 0.5rem; /* Adjust the padding for the menu button */
+      font-size: 0.875rem; /* Adjust the font size for the menu button */
+  }
+
+  .navbar-custom .navbar-brand {
+    flex-grow: 2;
+    justify-content: center; /* Center the brand logo and text */
+}
+
+.navbar-custom .navbar-toggler {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+}
+}
+
+
+/* Media query for extra small screens */
+@media (max-width: 576px) {
+  .navbar-custom .heading-gradient {
+      font-size: 0.875rem; /* Further adjust the font size for extra small screens */
+  }
+
+  .navbar-custom .navbar-toggler {
+      padding: 0.2rem 0.4rem; /* Further adjust the padding for the menu button */
+      font-size: 0.75rem; /* Further adjust the font size for the menu button */
+  }
+}
+
+/* Button Styles */
+.thumb-btn {
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.thumb-btn i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Thumbs up button */
+.thumbs-up {
+  color: #007bff;
+}
+
+.thumbs-up:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.thumbs-up:active {
+  transform: scale(0.95);
+}
+
+/* Thumbs down button */
+.thumbs-down {
+  color: #dc3545;
+}
+
+.thumbs-down:hover {
+  background-color: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.thumbs-down:active {
+  transform: scale(0.95);
+}
+
+/* New Loader Style */
+.loader {
+  width: 44.8px;
+  height: 44.8px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50% 50% 0 50%;
+  background: #0000;
+  background-image: radial-gradient(circle 11.2px at 50% 50%, #0000 94%, #ff4747);
+}
+
+.loader:after {
+  animation: pulse-ytk0dhmd 1s infinite;
+  transform: perspective(336px) translateZ(0px);
+}
+
+@keyframes pulse-ytk0dhmd {
+  to {
+    transform: perspective(336px) translateZ(168px);
+    opacity: 0;
+  }
+}
+
+/* Updated Offcanvas & Navbar Styling */
+.offcanvas {
+  width: 300px !important;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.offcanvas-header {
+  background: var(--primary-color);
+  padding: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas-title {
+  color: white;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+
+/* Enhanced Hamburger Button */
+.navbar-toggler {
+  --toggler-size: clamp(40px, 5vw, 48px); /* Responsive base size */
+  --line-width: clamp(18px, 2.5vw, 24px); /* Responsive line width */
+  --line-height: clamp(2px, 0.3vw, 3px); /* Responsive line height */
+  --line-gap: clamp(4px, 0.8vw, 6px); /* Responsive gap between lines */
+  
+  width: var(--toggler-size);
+  height: var(--toggler-size);
+  border: none !important;
+  border-radius: 8px;
+  padding: clamp(8px, 1.2vw, 12px);
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--line-gap);
+  transition: all 0.3s ease;
+  position: relative;
+  margin-right: clamp(0.5rem, 1vw, 1rem);
+}
+
+/* Custom Hamburger Icon */
+.navbar-toggler::before,
+.navbar-toggler::after,
+.navbar-toggler .navbar-toggler-icon {
+  content: '';
+  display: block;
+  width: var(--line-width);
+  height: var(--line-height);
+  background: white;
+  border-radius: var(--line-height);
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-color: white;
+  background-image: none !important;
+  width: var(--line-width) !important;
+  height: var(--line-height) !important;
+}
+
+/* Animation for active state */
+.navbar-toggler[aria-expanded="true"]::before {
+  transform: translateY(calc(var(--line-height) + var(--line-gap))) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"]::after {
+  transform: translateY(calc(-1 * (var(--line-height) + var(--line-gap)))) rotate(-45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  transform: scale(0);
+}
+
+/* Hover effects */
+.navbar-toggler:hover {
+  background: var(--btn-hover-color);
+  transform: scale(1.05);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Modal Styling */
+.modal-content {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.modal-header .close {
+  padding: 1.5rem;
+}
+
+.modal-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+/* Remove fixed sizes from media queries */
+@media (max-width: 768px), 
+       (max-width: 576px), 
+       (max-width: 480px) {
+  .navbar-toggler {
+    /* The clamp values above will handle the sizing */
+    position: relative;
+    right: 0;
+  }
+}
+
+/* Mobile Menu Links */
+.offcanvas .nav-link {
+  color: var(--primary-color);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.offcanvas .nav-link:hover {
+  background: rgba(46, 125, 50, 0.1);
+  color: var(--primary-color);
+  padding-left: 1.75rem;
+}
+
+/* Dropdown Styling */
+.offcanvas .dropdown-menu {
+  background: white;
+  border: none;
+  border-radius: 8px;
+  margin: 0.5rem;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.offcanvas .dropdown-item {
+  padding: 0.75rem 1.5rem;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.offcanvas .dropdown-item:hover {
+  background: rgba(46, 125, 50, 0.1);
+  transform: translateX(5px);
+}
+
+/* Close Button */
+.btn-close {
+  background-color: white !important;
+  opacity: 0.8;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-close:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+/* Animation for Menu Items */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.offcanvas.show .nav-link {
+  animation: slideIn 0.3s ease forwards;
+  animation-delay: calc(var(--animation-order) * 0.1s);
+}
+
+
+@media (max-width: 768px) {
+  .table-sm td,
+  .table-sm th {
+      padding: 0.3rem;
+      font-size: 0.875rem;
+  }
+
+  .w-md-auto {
+      width: 100% !important;
+  }
+  
+  .form-control-sm {
+      height: calc(1.5em + 0.5rem + 2px);
+      padding: 0.25rem 0.5rem;
+      font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .table-md-normal td,
+  .table-md-normal th {
+      padding: 0.75rem;
+      font-size: 1rem;
+  }
+
+  .w-md-auto {
+      width: auto !important;
+  }
+  
+  .form-control-md-normal {
+      height: calc(1.5em + 0.75rem + 2px);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+  }
+}
+
+/* Table responsiveness improvements */
+.table-responsive {
+  margin-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Button improvements */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+/* Role management styles */
+.badge {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table-responsive {
+  border-radius: 0.25rem;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .badge {
+      font-size: 0.8em !important;
+      padding: 6px 8px !important;
+  }
+  
+  .btn-sm {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.875rem;
+  }
+}
+

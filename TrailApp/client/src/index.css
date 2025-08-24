@@ -1,0 +1,17 @@
+body{
+    background-color: #f4f4f3;
+}
+.body-custom {
+
+    background-color: white;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: center;
+}
+.navbar-custom{
+    background-color: #0b3325;
+    
+}
+.footer-card{
+    background-color: #0b3325;
+}
