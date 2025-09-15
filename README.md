@@ -25,7 +25,7 @@ Walking Trail App
 
 ### Deployment URL:
 
-Deployment URL: Interns are working on merging the in-class and online class to one deployment link
+Deployment URL: [GGC Walking Trail App](https://ggcwalkingtrail.netlify.app/)
 
 Run app Fall 2024: [Walking App, Fall 2024 version](https://walking-trails-xnla.vercel.app/)
 
